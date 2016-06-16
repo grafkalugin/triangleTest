@@ -1,10 +1,10 @@
 package ru.yandex;
 
 import java.util.Arrays;
-
 import org.junit.*;
-
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
 
 public class RtriangleTest {
 
@@ -21,7 +21,8 @@ public class RtriangleTest {
 
         int squareLengthCathetus = list[0] + list[1];
         int squareLengthHypotenuse = list[2];
-        assertEquals("Данная фигура не является прямым треугольником.", squareLengthCathetus, squareLengthHypotenuse);
+        //assertEquals("Данная фигура не является прямым треугольником.", squareLengthCathetus, squareLengthHypotenuse); // jUnit
+        assertThat("Данная фигура не является прямым треугольником.", squareLengthCathetus, is(squareLengthHypotenuse)); // humcrest
     }
 
     @Before
