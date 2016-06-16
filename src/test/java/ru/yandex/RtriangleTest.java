@@ -21,27 +21,37 @@ public class RtriangleTest {
 
         int squareLengthCathetus = list[0] + list[1];
         int squareLengthHypotenuse = list[2];
+        
         //assertEquals("Данная фигура не является прямым треугольником.", squareLengthCathetus, squareLengthHypotenuse); // jUnit
         assertThat("Данная фигура не является прямым треугольником.", squareLengthCathetus, is(squareLengthHypotenuse)); // humcrest
+    }
+
+    @Test
+    public void mailTest() {
+        //
     }
 
     @Before
     public  void doBeforeTest (){
         //
     }
+
     @After
     public  void doAfterTest (){
         //
     }
+
     @BeforeClass
     public static void doBeforeClass (){
         //
     }
+
     @AfterClass
     public static void doAfterClass (){
         //
     }
-    @Ignore
+
+    @Ignore("Test ignoreTest ignored.")
     @Test
     public void ignoreTest (){
         System.out.println("Тест на игнор не пройден");
